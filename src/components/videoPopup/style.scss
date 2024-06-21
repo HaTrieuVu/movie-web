@@ -1,3 +1,4 @@
+@import '../../mixins.scss';
 .videoPopup {
     display: flex;
     justify-content: center;
@@ -24,17 +25,33 @@
     }
     .videoPlayer {
         position: relative;
-        width: 800px;
+        width: 700px;
         aspect-ratio: 16 / 9;
         background-color: white;
         transform: scale(0.2);
         transition: transform 250ms;
+        flex-shrink: 0;
         .closeBtn {
             position: absolute;
             top: -20px;
             right: 0;
             color: white;
             cursor: pointer;
+            padding: 3px 5px;
+            background: transparent;
+            border-radius: 3px;
+            &:hover {
+                background: red;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        @include md {
+            position: relative;
+            width: 800px;
+            aspect-ratio: 16 / 9;
+            background-color: white;
+            transform: scale(0.2);
+            transition: transform 250ms;
         }
     }
     &.visible {

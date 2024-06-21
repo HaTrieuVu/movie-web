@@ -18,9 +18,9 @@ const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location]);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [location]);
 
     const controlNavbar = () => {
         if (window.scrollY > 200) {
@@ -45,10 +45,10 @@ const Header = () => {
     const searchQueryHandler = (e) => {
         if (e.key == 'Enter' && query.length > 0) {
             navigate(`/search/${query}`);
+            setTimeout(() => {
+                setShowSearch(false);
+            }, 1000);
         }
-        setTimeout(() => {
-            setShowSearch(false);
-        }, 1000);
     };
 
     // mở nút search
@@ -77,6 +77,7 @@ const Header = () => {
                 <div className="logo">
                     <img src={logo} alt="" onClick={() => navigate('/')} />
                 </div>
+                {/* ipad ms hien menu */}
                 <ul className="menuItems">
                     <li className="menuItem" onClick={() => navigationHandler('movie')}>
                         Movies

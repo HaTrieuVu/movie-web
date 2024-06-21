@@ -11,10 +11,9 @@ const Home = () => {
     return (
         <div className="homePage">
             <HeroBanner />
-            <div style={{ height: '1000px' }}></div>
-            {/* <Trending />
+            <Trending />
             <Popular />
-            <TopRated /> */}
+            <TopRated />
         </div>
     );
 };

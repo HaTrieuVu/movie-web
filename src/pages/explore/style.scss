@@ -1,4 +1,4 @@
-@import "../../mixins.scss";
+@import '../../mixins.scss';
 .explorePage {
     min-height: 700px;
     padding-top: 100px;
@@ -35,7 +35,6 @@
             &.genresDD {
                 width: 100%;
                 @include md {
-                    max-width: 500px;
                     min-width: 250px;
                 }
             }

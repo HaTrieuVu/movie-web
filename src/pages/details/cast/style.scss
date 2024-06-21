@@ -1,4 +1,4 @@
-@import "../../../mixins.scss";
+@import '../../../mixins.scss';
 .castSection {
     position: relative;
     margin-bottom: 50px;
@@ -23,13 +23,17 @@
             color: white;
             .profileImg {
                 width: 125px;
-                height: 125px;
-                border-radius: 50%;
+                height: 185px;
+                border-radius: 10%;
                 overflow: hidden;
                 margin-bottom: 15px;
+                &:hover img {
+                    transform: scale(1.1);
+                    transition: all 0.3s ease-in-out;
+                }
                 @include md {
                     width: 175px;
-                    height: 175px;
+                    height: 260px;
                     margin-bottom: 25px;
                 }
                 img {

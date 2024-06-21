@@ -87,6 +87,9 @@
             padding: 20px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             animation: mobileMenu 0.3s ease forwards;
+            // @include md {
+            //     display: none;
+            // }
             .menuItem {
                 font-size: 20px;
                 width: 100%;
